@@ -1,0 +1,337 @@
+@charset "utf-8";
+@import "./reset.css";
+// page设置宽度
+.page{
+    width: 100%;
+    // min-height: 800px;
+    background-color: #eee;
+}
+body{
+    position: relative;
+}
+// 页面头部开始
+header{
+    width: 100%;
+    background: #ffffff;
+    .bannerr{
+        width: 1200px;
+        height: 62px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        
+        .logo{
+            width: 230px;
+            height: 62px;
+            padding-top: 15px;
+            a{
+                display: block;
+                background: url("../img/logo_it.jpg") no-repeat;  
+                text-indent: -9999px;
+                overflow: hidden;
+                background-size:220px 32px; 
+
+            }
+        } 
+        .nav{
+            width: 660px;
+            height: 62px;
+            line-height: 62px;
+            // background: green;
+            margin-left: 65px;
+            ul{
+                display: flex;
+                justify-content: space-between;
+                .dian{
+                    vertical-align: middle;
+                    margin-right:8px;
+
+                }
+                li{
+                    // width: 14%;
+                    position: relative;
+                    a{
+                        color: #000000;
+                        margin-right: 10px;
+                        &.active{
+                         color: #ff4a00;
+                        //  display: none;
+                     }
+                    }
+                    
+                    #a{
+                        border: 1px solid #ff4a00;
+                        border-radius: 10px;
+                        padding: 5px 12px;
+                        color: #ff4a00;
+                    }
+                    
+                    .ul2{
+                        position: absolute;
+                        top: 62px;
+                        left: -40px;
+                    }
+                    ul{
+                        position: absolute;
+                        top: 55px;
+                        left: -10px;
+                        // width: 85px;
+                        // width: auto;
+                        padding-left: 15px;
+                        padding-bottom: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        background: #ffffff;
+                        box-shadow:0px -2px 2px rgba(0, 0, 0,0.2) ;
+                        display: none;
+                        z-index: 9999;
+                        .li2{
+                            width: 160px;
+                            height: 80px;
+                            padding: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content:space-around;
+                            img{
+                                width: 69px;
+                                height: 69px;
+                            }
+                            p{
+                                height: 69px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                padding-bottom: 30px;
+                                span{
+                                    height: 25px ;
+                                }
+
+                            }
+
+                        }
+                        li{
+                            width: 85px;
+                            // width: auto;
+                            height: 40px;
+                            a{
+                              &:hover{
+                                  color: #ff4a00;
+                              }  
+                            }
+                        }
+                    }
+                }
+                    
+            }    
+        }
+        .search{
+            position: relative;
+            width: 320px;
+            height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            :nth-child(2){
+                 position: absolute;
+                    top: 23px;
+                    left:130px ;
+            }
+            input {
+                width: 140px;
+                height: 25px;
+                border: 1px solid grey;
+                border-radius: 20px;
+                padding-left: 10px;
+                opacity: 0;
+                outline: none;
+            }
+           
+            span{
+                font-size: 12px;
+                a{
+                    &.active{
+                    text-decoration:underline; 
+                    // display: none;   
+                }
+                }
+                
+            }
+        }
+        .d1{
+            position: relative;
+            display: none;
+            z-index: 9999;
+            .ul3{
+                position: absolute;
+                top: 62px;
+                left: -160px;
+                width: 140px;
+                padding: 10px;
+                font-size: 14px;
+                background-color:#ffffff;
+                box-shadow:0px -2px 2px rgba(0, 0, 0,0.2) ;
+             
+                .li3{
+                     display: flex;
+                    justify-content:space-around;
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
+                    // border-color: red;
+                    border-bottom: 1px dashed ;
+                    p{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        span{
+                            height: 25px ;
+                        }
+                    }                   
+                }
+                .ll{
+                    border-bottom: none;
+                    padding: 0px;
+                }
+
+            }
+        }
+    }    
+}
+
+
+// 右侧微信、微博、手机的固定定位开始
+.wechat{ 
+    width: 65px;
+    height: 170px;
+    position: fixed;
+    right: 0px;
+    bottom:160px ;
+    // background: yellow;
+    ul{
+        position: absolute;
+        right: 0px;
+        // width: 65px;
+        height: 165px;
+        // background: pink;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+        li{
+            position: relative;
+
+            img{
+                cursor: pointer;
+                width: 45px;
+                height: 45px;
+            }
+            .d1{
+                background: #ffffff;
+                position: absolute;
+                right: 48px;
+                top: 0px;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                display: none;
+
+                img{
+                    width: 110px;
+                    height: 110px;
+                    padding: 14px 25px;
+                }
+                p{
+                    text-align: center;
+                    font-size: 14px;
+                }
+            }
+            .d2{
+                position: absolute;
+                right: 45px;
+                top: -10px;
+                display: flex;
+                justify-content: space-between;
+                background-color: #ffffff;
+                width: 130px;
+                height: 60px;
+                padding: 20px 25px;
+                align-items: center;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                display: none;
+                img{
+                    position: absolute;
+                    top: 30px;
+                    left: 25px;
+                }
+
+                span{
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                     &:hover{
+                            text-decoration: underline;
+
+                        }
+                    a{
+                        font-size: 14px;
+                        color: blue;   
+                    }
+                }
+                p{
+                    width: 60px;
+                    height: 20px;
+                    line-height: px;
+                    background: rgb(237, 32, 51);
+                    border-radius: 2px;
+                    border: 1px solid red;
+                    text-align: center;
+                    position: absolute;
+                    bottom: 25px;
+                    right: 25px;
+                    padding: 2px;
+                    &:hover{
+                        background: rgb(255, 85, 95);
+                    }
+                    a{
+                        font-size: 12px;
+                        color: #ffffff;
+                        
+                        
+                    }
+                }
+            }
+            .d3{
+                background: #ffffff;
+                position: absolute;
+                right: 45px;
+                top: 0px;
+                padding: 4px;
+                padding-bottom: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                display: none;
+
+                img{
+                    width: 120px;
+                    height: 120px;
+                    padding: 14px 25px;
+                }
+                p{
+                    text-align: center;
+                    font-size: 12px;
+                    margin-top: -15px;
+                }
+            }
+
+
+        }
+    }
+
+
+}
+
+
+

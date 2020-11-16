@@ -1,0 +1,982 @@
+@charset "utf-8";
+
+@import "./public.css";
+
+
+// 轮播图部分开始
+#banner {
+    width: 100%;
+    min-height: 550px;
+    position: relative;
+    overflow: hidden;
+
+    // background-color: yellow;
+    #banner_con {
+        width: 1399px;
+        height: 393px;
+        margin: auto;
+        position: relative;
+
+        ul {
+            width: 5596px;
+            height: 393px;
+            position: absolute;
+
+            li {
+                float: left;
+
+                img {
+                    width: 1399px;
+                    height: 393px;
+                }
+            }
+        }
+
+        p {
+            width: 1399px;
+            height: 40px;
+            position: absolute;
+            bottom: 5px;
+            text-align: center;
+            line-height: 40px;
+
+            span {
+                width: 15px;
+                height: 15px;
+                background: #ffffff;
+                display: inline-block;
+                margin-right: 10px;
+                border-radius: 50%;
+
+                &.active {
+                    background: red;
+                }
+            }
+        }
+
+        // 左边按钮
+        #left {
+            width: 40px;
+            height: 70px;
+            background: rgb(64, 65, 69);
+            position: absolute;
+            left: 330px;
+            top: 150px;
+            color: #ffffff;
+            font-size: 40px;
+            text-align: center;
+            line-height: 70px;
+            display: none;
+        }
+        // 右边按钮
+        #right {
+            width: 40px;
+            height: 70px;
+            background: rgb(64, 65, 69);
+            position: absolute;
+            right: 130px;
+            top: 150px;
+            color: #ffffff;
+            font-size: 40px;
+            text-align: center;
+            line-height: 70px;
+            display: none;
+        }
+
+        // 悬浮导航条
+        .leftnav {
+            width: 230px;
+            max-height: 425px;
+            background-color: #ff4a00;
+            opacity: 0.8;
+            position: absolute;
+            left: 80px;
+            padding: 10px;
+            padding-top: 10px;
+            overflow: auto;
+
+            &::-webkit-scrollbar {
+                width: 4px;
+                background: #ffffff;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                width: 4px;
+                background: yellow;
+            }
+
+            dl {
+
+                float: left;
+                width: 230px;
+                margin-bottom: 10px;
+
+                dt {
+                    font-size: 18px;
+                    display: block;
+                    margin-bottom: 5px;
+                    margin-top: 8px;
+
+                    &:hover {
+                        text-decoration: underline;
+                        // cursor: pointer;
+                    }
+                }
+
+                dd {
+                    font-size: 12px;
+                    float: left;
+                    margin-right: 10px;
+                    margin-bottom: 8px;
+
+                    &:hover {
+                        text-decoration: underline;
+                        // cursor: pointer;
+
+                    }
+                }
+
+                a {
+                    color: #ffffff;
+                }
+            }
+        }
+// 轮播图下面四张图片
+        .ims {
+            height: 106px;
+            position: absolute;
+            background-color: #ffffff;
+            left: 345px;
+            bottom: -140px;
+            display: flex;
+            padding-top: 20px;
+
+            a {
+                border-right: 2px dashed #cccccc;
+                width: 190px;
+                height: 82px;
+                margin: 0 20px;
+                margin-right: 0px;
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
+// 热门直播部分开始
+.rmzo {
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 40px;
+
+    .host {
+        width: 100%;
+        height: 76px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            &:first-child {
+                &:hover {
+                    color: #ff4a00;
+                    text-decoration: underline;
+                }
+            }
+
+            &:last-child {
+                color: #ff4a00;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .rmbox {
+        width: 1200px;
+        height: 350px;
+        overflow: hidden;
+        position: relative;
+        // background-color: pink;
+        display: flex;
+
+        .rmbox_left {
+            width: 620px;
+            height: 350px;
+            // position: relative;
+            .left_5{
+                width: 620px;
+                height: 350px;
+                position: relative;
+                display: none;
+                        &#actt {
+                            width: 620px;
+                            height: 350px;
+                            position: relative;
+                            display: block;
+                        }
+
+                    img {
+                    width: 620px;
+                    height: 349px;
+                    }
+
+                        a {
+                            color: #ffffff;
+                        }
+
+                .nobegin {
+                    width: 134px;
+                    height: 54px;
+                    background: rgba(0, 0, 0, .8);
+                    font-size: 20px;
+                    border-radius: 90px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-top: -32px;
+                    margin-left: -62px;
+    
+                    img {
+                        width: 18px;
+                        height: 18px;
+                        margin-right: 8px;
+    
+                    }
+                }
+    
+                .zhezhao {
+                    width: 600px;
+                    height: 40px;
+                    line-height: 40px;
+                    background: rgba(0, 0, 0, .5);
+                    position: absolute;
+                    bottom: 0px;
+                    padding-left: 20px;
+                    a{
+                        position: absolute;
+                    }
+                }
+    
+
+            }
+    
+        }
+
+        .rmbox_right {
+            width: 580px;
+            background-color: #ffffff;
+            // background: red;
+            .xian {
+                width: 1px;
+                height: 350px;
+                border-right: 1px dashed #cccccc;
+                margin-left: 40px;
+            }
+
+            ul {
+                position: absolute;
+                top: 6px;
+
+                li {
+                    width: 580px;
+                    height: 66px;
+                    display: flex;
+                    align-items: center;
+
+                    &.active {
+                        background: rgb(255, 240, 240);
+                        cursor: pointer;
+                    }
+
+                    .rmbox_right_le {
+                        width: 100%;
+                        height: 66px;
+                        display: flex;
+                        align-items: center;
+                        padding-left: 32px;
+
+                        img {
+                            border-radius: 50%;
+                        }
+
+                        .txt {
+                            margin: 0 16px;
+                        }
+
+                        b {
+                            height: 66px;
+                            line-height: 66px;
+                            font-size: 18px;
+
+                            a {
+                                color: #000000;
+                                &.active {
+                                    color: #ff4a00;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//   精品网课部分开始
+.jpwk {
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    // margin-bottom: 20px;
+
+    .jingpin {
+        width: 100%;
+        height: 76px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .tab {
+            width: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            ul li{
+                a{
+                    &.active{
+                        text-decoration: underline;
+                        color: #ff4a00;
+                    }
+                }
+            } 
+ 
+
+            h2 {
+                margin-right: 70px;
+            }
+
+            ul {
+                margin-left: 0px;
+                display: flex;
+
+                li {
+                    margin-right: 20px;
+                }
+            }
+
+        }
+
+        .more {
+            span {
+                &:first-child {
+                    &:hover {
+                        color: #ff4a00;
+                        text-decoration: underline;
+                    }
+                }
+
+                &:last-child {
+                    color: #ff4a00;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .jingpin_box {
+        width: 1200px;
+        // min-height: 534px;
+        display: none;
+
+        &#active1{ 
+            width: 1200px;
+           
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            display: block;
+        }
+            ul {
+                // width: 1200px; 
+                display: flex;
+               justify-content: space-between;
+               flex-wrap: wrap;  
+                
+               
+    
+                li {
+                    width: 285px;
+                    height: 255px;
+                    margin-bottom: 20px;
+                    background: #ffffff;
+                    &:hover{
+                        transform: translateY(-3px);
+                        // transition: .2s linear;
+                    }
+    
+                    p {
+                        padding-right: 5px;
+                        padding-left: 12px;
+                    }
+    
+                    .p1 {
+                        width: 268px;
+                        // background: yellow;
+                        margin: 15px 0;
+                        font-size: 14px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+
+                        &:hover{
+                            text-decoration: underline;
+                        }
+    
+                    }
+    
+                    .p2 {
+                        display: flex;
+                        justify-content: space-between;
+    
+                        span {
+                            color: #ff4a00;
+                        }
+    
+                        .s1 {
+                            font-size: 14px;
+                        }
+    
+                        .s2 {
+                            font-size: 20px;
+                        }
+    
+                        .s3 {
+                            display: inline-block;
+                            font-size: 14px;
+                            padding: 5px;
+                            background: rgb(255, 239, 232);
+                        }
+                    }
+                }
+            }
+
+        // }
+
+        
+    }
+}
+
+// 免费课程部分开始
+.mfkc {
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    // margin-bottom: 20px;
+
+    .free {
+        width: 100%;
+        height: 76px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .tab1 {
+            width: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            ul li a{
+                &.active{
+                    text-decoration: underline;
+                    color: #ff4a00;
+                }
+            }
+
+            h2 {
+                margin-right: 70px;
+            }
+
+            ul {
+                margin-left: 0px;
+                display: flex;
+
+                li {
+                    margin-right: 20px;
+                }
+            }
+
+        }
+
+        .more {
+            span {
+                &:first-child {
+                    &:hover {
+                        color: #ff4a00;
+                        text-decoration: underline;
+                    }
+                }
+
+                &:last-child {
+                    color: #ff4a00;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .mfkc_box {
+        width: 1200px;
+        // min-height: 534px;
+        display: none;
+            &#active22{ 
+                width: 1200px; 
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                display: block;
+            }
+            ul {
+                width: 1200px;   
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                
+               
+    
+                li {
+                    width: 285px;
+                    height: 255px;
+                    margin-bottom: 20px;
+                    background: #ffffff;
+                    &:hover{
+                        transform: translateY(-3px);
+                        // transition: .2s linear;
+                    }
+    
+                    p {
+                        padding-right: 5px;
+                        padding-left: 12px;
+                    }
+    
+                    .p1 {
+                        width: 268px;
+                        // background: yellow;
+                        margin: 15px 0;
+                        font-size: 14px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+
+                        &:hover{
+                            text-decoration: underline;
+                        }
+    
+                    }
+    
+                    .p2 {
+                        display: flex;
+                        justify-content: space-between;
+    
+                        span {
+                            color: #ff4a00;
+                        }
+    
+                        .s1 {
+                            font-size: 14px;
+                        }
+    
+                        .s2 {
+                            font-size: 20px;
+                        }
+    
+                        .s3 {
+                            display: inline-block;
+                            font-size: 14px;
+                            padding: 5px;
+                            background: rgb(255, 239, 232);
+                        }
+                    }
+                }
+            }
+
+        // }
+
+        
+    }
+}
+
+// 就业面授班部分开始
+.jyms {
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    // margin-bottom: 20px;
+
+    .jiuye {
+        width: 100%;
+        height: 76px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .tab2 {
+            width: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            ul li a{
+                &.active{
+                    text-decoration: underline;
+                    color: #ff4a00;
+                }
+            }
+
+            h2 {
+                margin-right: 70px;
+            }
+
+            ul {
+                margin-left: 0px;
+                display: flex;
+
+                li {
+                    margin-right: 20px;
+                }
+            }
+
+        }
+
+        .more {
+            span {
+                &:first-child {
+                    &:hover {
+                        color: #ff4a00;
+                        text-decoration: underline;
+                    }
+                }
+
+                &:last-child {
+                    color: #ff4a00;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .jyms_box {
+        width: 1200px;
+        // min-height: 534px;
+        display: none;
+            &#active33{ 
+                width: 1200px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                display: block;
+            }
+            ul {
+                width: 1200px;   
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+               
+                li {
+                    width: 285px;
+                    height: 255px;
+                    margin-bottom: 20px;
+                    background: #ffffff;
+                    &:hover{
+                        transform: translateY(-3px);
+                        // transition: .2s linear;
+                    }
+    
+                    p {
+                        padding-right: 5px;
+                        padding-left: 12px;
+                    }
+    
+                    .p1 {
+                        width: 268px;
+                        // background: yellow;
+                        margin: 15px 0;
+                        font-size: 14px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+
+                        &:hover{
+                            text-decoration: underline;
+                        }
+    
+                    }
+    
+                    .p2 {
+                        display: flex;
+                        justify-content: space-between;
+    
+                        span {
+                            color: #ff4a00;
+                        }
+    
+                        .s1 {
+                            font-size: 14px;
+                        }
+    
+                        .s2 {
+                            font-size: 20px;
+                        }
+    
+                        .s3 {
+                            display: inline-block;
+                            font-size: 14px;
+                            padding: 5px;
+                            background: rgb(255, 239, 232);
+                        }
+                    }
+                }
+            }
+
+        // }
+
+        
+    }
+}
+// 分割线部分开始
+.fenge{
+    width: 1200px;
+    height: 58px;
+    line-height: 58px;
+    margin: auto;
+    text-align: center;
+    // border: 1px solid red;
+    background: url("../img/ujyx_11.jpg") no-repeat;
+    p{
+
+        font-size: 26px;
+    }
+}
+// 分隔线的详情开始
+.fenge_detail{
+    width: 1200px;
+    height: 140px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: -50px;
+   
+    .fenge_detail_01{
+        width: 29%;
+        padding-left: 1%;
+        padding-right: 2%;
+        height: 140px;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid #ccc;
+        img{
+            width: 88px;
+            height: 88px;
+            margin-right: 15px;
+
+        }
+        .txt{
+                .ss1{
+                    color: rgb(254, 113, 96);
+                }
+                .ss2{
+                    color: rgb(61, 155, 251);
+                }
+                .ss3{
+                    color:  rgb(163, 105, 253);
+                }
+            p{
+                margin-top: 8px;
+                font-size: 14px;
+                line-height: 24px;
+                color: #666666;
+            }
+        }
+    }
+    .a:hover{
+        border-color:rgb(254, 113, 96);
+    }
+    .b:hover{
+        border-color: rgb(61, 155, 251);
+    }
+    .c:hover{
+        border-color:  rgb(163, 105, 253);
+    }
+
+
+}
+// 扫描二维码下载应用部分开始
+    .down{
+        width: 1200px;
+        height: 196px;
+       position: relative;
+       bottom: -100px;
+        margin: auto;
+        background: url("../img/ujyx_12.jpg") no-repeat;
+    
+        .download{
+            width: 230px;
+            height: 110px;
+            position:absolute;
+            right: 60px;
+            top: 50%;
+            margin-top: -55px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            img{
+                width: 110px;
+                height: 110px;
+                border: 1px solid #ccc;
+                padding: 2px;
+            }
+            p{
+                line-height: 30px;
+            }
+     
+        }
+        
+    }
+
+
+// 友情链接部分开始
+.friendly_link{
+    width: 100%;
+    // height:306px;
+    box-sizing: border-box;
+    padding-top: 150px;
+    .sort{
+        width: 1200px;
+        margin: auto;      
+        line-height: 30px;
+        // margin-top: 150px;
+        .sort_title{
+            ul {
+               
+                display: flex;
+                justify-content: left;
+                margin-bottom: 5px;
+                li{
+                    margin-right: 20px;
+                    cursor: pointer;
+                    &.active{
+                        color: red;
+                    }
+                    &:nth-child(1){
+                        font-size: 16px;
+                       
+                    }
+                    &:nth-child(2){
+                        font-size: 18px;  
+                    }
+                }
+            }
+        }
+        .sort_con{
+            ul{
+                width: 1200px;
+                display: none;
+                margin-bottom: 40px;
+                &.active{
+                    display: block;
+                }
+                li{
+                    a{
+                        margin-right: 29px;
+                        font-size: 14px;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// 回到顶部开始
+#top{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(61, 155, 251);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    display: none;
+    &:hover{
+        background: rgb(61, 155, 251);;
+    }
+    a{
+        color: rgb(61, 155, 251);
+        &:hover{
+            color: #ffffff;
+        }
+    }
+}
+
+
+
+// 页面底部开始
+footer{
+    position: relative;
+    width: 100%;
+    height: 156px;
+    background: rgb(64, 65, 68);
+    font-size: 12px;
+    color: #999;
+    line-height: 30px;
+    text-align: center;
+    .center{
+        width: 650px;
+        height: 82px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -41px;
+        margin-left: -325px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // background: pink;
+        .left{
+            
+            #p1{
+                font-size: 14px;
+            }
+            a{
+                color: #999;
+                &:hover{
+                    color: rgb(255, 74, 0);
+                }
+            }
+        }
+        .right{
+            display: flex;
+            justify-content: space-between;
+            img{
+                width: 80px;
+                height: 30px;
+                margin-left: 10px;
+
+            }
+        }
+    }
+
+}
+

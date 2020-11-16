@@ -1,0 +1,163 @@
+@charset "utf-8";
+@import "./public.css";
+
+// 注册主体开始
+.login_con{
+    .login_con_center{
+        width: 1040px;
+        margin: auto;
+        display: flex;
+        // background: pink;
+        .center_left{
+            width: 50%;
+            padding: 56px 0px  0px 0px;
+            ul{  
+                // width: 600px;
+                position: relative;
+                // background: tomato;
+                border-right: 1px solid #cccccc;
+                .ll4{
+                    width: 268px;
+                    height: 16px;
+                    // background: pink;
+                    // padding-left: 125px; 
+                    margin-left: 70px;
+                    text-align: right;
+                    a{
+                        font-size: 12px;
+                        // background: red;
+                         color: #ff4a00;
+                        text-decoration: underline;
+                    }
+                    span{
+                        width: 100px;
+                        // background: red;
+                        font-size: 14px;
+                    }
+                    
+                    a{
+                        font-size: 14px;
+                        margin-right: 10px;
+                    }
+                }
+                li{
+                    height: 38px;
+                    line-height: 38px;
+                    margin-bottom: 15px;
+                    // background: yellow;
+                  
+                    span{
+                        display: inline-block;
+                        text-align: right;
+                        width: 70px;
+                        font-size: 14px;
+                    }
+                    input{
+                        width: 262px;
+                        height: 38px;
+                        border: 1px solid #cccccc;
+                        outline: none;
+                        padding-left: 4px;
+                      
+                    }
+                    b{
+                        // display: inline;
+                        margin-left: 10px;
+                        font-size: 12px;
+                        color:rgb(153, 153, 153);
+                    }
+                    button{
+                        width: 268px;
+                        height: 42px;
+                        color: #ffffff;
+                        background: rgb(255, 74, 0);
+                        margin-left: 70px;
+                        outline: none;
+                        cursor: pointer;
+
+                    }
+
+                }
+                p{
+                    position: absolute;
+                    bottom: 140px;
+                    right: 190px;
+                    color: blue;
+                    font-size: 14px;
+                    cursor: pointer;
+                }
+                .ll9{
+                    position: absolute;
+                    bottom: 90px;
+                    right: 190px;
+                    font-size: 12px;
+                    &:hover{
+                        color: #ff4a00;
+                    }
+                    
+                }
+            }
+
+        }
+        .center_right{
+            // width: 50%;
+            padding: 60px 0 0px 90px;
+            // background: yellow;
+            dl{
+                line-height: 35px;
+                dd{
+                    color: #666666;
+                }
+            }
+          
+        }
+    }
+}
+
+// 页面底部开始
+footer{
+    position: relative;
+    width: 100%;
+    height: 156px;
+    background: rgb(64, 65, 68);
+    font-size: 12px;
+    color: #999;
+    line-height: 30px;
+    text-align: center;
+    .center{
+        width: 750px;
+        height: 82px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -41px;
+        margin-left: -375px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // background: pink;
+        .left{
+            
+            #p1{
+                font-size: 14px;
+            }
+            a{
+                color: #999;
+                &:hover{
+                    color: rgb(255, 74, 0);
+                }
+            }
+        }
+        .right{
+            display: flex;
+            justify-content: space-between;
+            img{
+                width: 80px;
+                height: 30px;
+                margin-left: 10px;
+
+            }
+        }
+    }
+
+}
